@@ -55,12 +55,48 @@ print('\nPercentage of Current drinker')
 prct3 = cnt2/total*100
 print(prct3)
 
+
+*******************************************************************************************************************************
 Output: 
+In below solution 
+ 1 stands for alcoholic drinker 
+ 2 stands for non alcoholic drinker
+ 3 stands for unknown
+Total number of person
+43093
 
+Count of person who drank atleast 1 alcoholic drink in there life
+1    34827
+Name: S2AQ1, dtype: int64
 
+Percentage distribution of total people
+1    80.81823
+2    19.18177
+Name: S2AQ1, dtype: float64
 
+Distribution of people in last 12 months
+1    26946
+2    16116
+9       31
+Name: S2AQ3, dtype: int64
+
+Percentage distribution in last 12 months
+1    62.529877
+2    37.398185
+9     0.071937
+Name: S2AQ3, dtype: float64
+
+Count of Current drinker
+1    26946
+Name: CONSUMER, dtype: int64
+
+Percentage of Current drinker
+1    62.529877
+Name: CONSUMER, dtype: float64
+
+*********************************************************************************************************************************
 
 Summary
 
-In the above program I have taken a data of Alcoholic drinkers and do the analysis of alcoholic drinkers. How many people have drank 
-alcoholic drink once in a lifetime to the current number of people who drink alcoholic drink.
+In the above program I have taken a data of Alcoholic drinkers and do the analysis of alcoholic drinkers. In this analysis, I have 
+analysed what is the difference in current count of the alcoholic drinkers respective than earlier count. 
