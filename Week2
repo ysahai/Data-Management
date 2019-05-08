@@ -55,6 +55,8 @@ print('\nPercentage of Current drinker')
 prct3 = cnt2/total*100
 print(prct3)
 
+Output: 
+
 
 
 
