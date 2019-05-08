@@ -1,0 +1,64 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Wed May  8 12:57:45 2019
+
+@author: ysaha
+"""
+
+#import liberaries
+
+import pandas
+import numpy
+
+
+#Read the data
+data = pandas.read_csv('Nesarc_pds.csv', low_memory = False)
+
+print('In below solution \n 1 stands for alcoholic drinker \n 2 stands for non alcoholic drinker\n 3 stands for unknown')
+
+#Total number of person
+print('Total number of person')
+total = data['S2AQ1'].count()
+print(total)
+
+#Count of person who drank atleast 1 alcoholic drink in there life
+print('\nCount of person who drank atleast 1 alcoholic drink in there life')
+Alco= data[(data['S2AQ1']==1)]
+cnt = Alco['S2AQ1'].value_counts(sort=False)
+print(cnt)
+
+#Percentage of person who drank atleast 1 alcoholic drink in there life
+print('\nPercentage distribution of total people')
+perct = data['S2AQ1'].value_counts(sort=False, normalize= True)
+perct = perct*100
+print(perct)
+
+#Count of people in last 12 months
+print('\nDistribution of people in last 12 months')
+cnt1 = data['S2AQ3'].value_counts(sort=False)
+print(cnt1)
+
+#Percentage of people in last 12 months
+print('\nPercentage distribution in last 12 months')
+prct2 = data['S2AQ3'].value_counts(sort=False, normalize= True)
+prct2 = prct2*100
+print(prct2)
+
+#Count of current drinker
+print('\nCount of Current drinker')
+cond = data[(data['S2AQ1']==1) &(data['CONSUMER']==1)]
+cnt2 = cond['CONSUMER'].value_counts(sort=False)
+print(cnt2)
+
+#percentage of current drinker
+print('\nPercentage of Current drinker')
+prct3 = cnt2/total*100
+print(prct3)
+
+
+
+
+Summary
+
+In the above program I have taken a data of Alcoholic drinkers and do the analysis of alcoholic drinkers. How many people have drank 
+alcoholic drink once in a lifetime to the current number of people who drink alcoholic drink.
